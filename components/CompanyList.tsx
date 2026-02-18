@@ -83,9 +83,7 @@ export default function CompanyList({ companies }: CompanyListProps) {
 
     return (
         <div className="mt-24 w-full flex flex-col items-center overflow-hidden">
-            <h2 className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-12 text-center">
-                Experience with Industry Leaders
-            </h2>
+
 
             <div className="relative w-full max-w-full group">
                 {/* Gradient Masks */}
