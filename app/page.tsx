@@ -1,69 +1,29 @@
-import { topics } from '@/lib/data';
-import TopicCard from '@/components/TopicCard';
-import CompanyList from '@/components/CompanyList';
-
-
 export default function Home() {
-
-  const companies = [
-    { name: 'Pandora', logo: '/images/companies/pandora.png' },
-    { name: 'Cpaxtra', logo: '/images/companies/cpaxtra.png' },
-    { name: 'MakroPro', logo: '/images/companies/makropro.png' },
-    { name: 'CPF', logo: '/images/companies/cpf.png' },
-    { name: 'Viriyah', logo: '/images/companies/viriyah.png' },
-    { name: 'PTG', logo: '/images/companies/ptg.png' },
-    { name: 'Toyota', logo: '/images/companies/toyota.png' },
-    { name: 'Thai Wah', logo: '/images/companies/thaiwah.png' }
-  ];
-
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center p-8 sm:p-20 overflow-hidden bg-zinc-50 text-zinc-900 transition-colors duration-300">
-
-
-      {/* Background Gradient Mesh */}
+    <main className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="/images/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
-        {/* Header Section - Grid Aligned */}
-        <header className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full mb-16 items-end">
-          <div className="md:col-span-2">
-            <span className="block text-xs font-bold text-cyan-600 tracking-widest uppercase mb-2">My Work</span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-zinc-900 leading-none">
-              PORTFOLIO
-            </h1>
-          </div>
-          <div className="md:col-span-2 pb-2">
-            <p className="text-lg md:text-xl text-zinc-500 font-light leading-relaxed max-w-lg ml-auto md:ml-0">
-              Delivering enterprise-grade digital solutions through advanced data analytics and custom application development.
-            </p>
-          </div>
-        </header>
+      <div className="relative z-10 flex flex-col items-center gap-8 fade-in-up text-center max-w-5xl -mt-20">
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full mb-32">
-          {topics.map((topic) => (
-            <div key={topic.title} className="h-64 sm:h-80">
-              {/* @ts-ignore - Dynamic icon component type issue */}
-              <TopicCard
-                title={topic.title}
-                description={topic.description}
-                icon={topic.icon}
-                slug={topic.slug}
-              />
-            </div>
-          ))}
-        </div>
+        {/* Slogan */}
+        <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight text-white drop-shadow-lg leading-tight">
+          We accelerate your growth through <span className="text-sky-400">digital transformation</span>
+        </h1>
 
-        {/* Companies Section */}
-        <CompanyList companies={companies} />
-
-        <footer className="mt-32 text-zinc-600 text-sm">
-          © {new Date().getFullYear()} Personal Portfolio. All rights reserved.
-        </footer>
       </div>
     </main>
   );

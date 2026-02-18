@@ -12,21 +12,21 @@ interface TopicCardProps {
 export default function TopicCard({ title, description, icon: Icon, slug }: TopicCardProps) {
   return (
     <Link href={`/topics/${slug}`} className="block h-full group">
-      <div className={`relative h-full overflow-hidden rounded-[2rem] p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 border border-zinc-100 bg-white shadow-sm flex flex-col`}>
+      <div className={`relative h-full overflow-hidden rounded-[2rem] p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 border border-zinc-800 bg-zinc-900 shadow-sm flex flex-col`}>
         {/* Subtle background decoration */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-50/30 rounded-bl-[4rem] -z-10 transition-transform duration-500 group-hover:scale-110" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-900/10 rounded-bl-[4rem] -z-10 transition-transform duration-500 group-hover:scale-110" />
 
         <div className="h-full flex flex-col">
-          <div className="w-14 h-14 rounded-2xl bg-cyan-50 flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors duration-500">
-            <Icon className="w-7 h-7 text-cyan-600 group-hover:text-cyan-700 transition-colors duration-500" strokeWidth={1.5} />
+          <div className="w-14 h-14 rounded-2xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:bg-cyan-900/20 transition-colors duration-500">
+            <Icon className="w-7 h-7 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-500" strokeWidth={1.5} />
           </div>
 
-          <h3 className="text-2xl font-bold tracking-tight text-zinc-900 mb-3 group-hover:text-cyan-900 transition-colors duration-300">
+          <h3 className="text-2xl font-bold tracking-tight text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
             {title}
           </h3>
 
           {description && (
-            <p className="text-base text-zinc-500 leading-relaxed group-hover:text-zinc-600 transition-colors duration-300">
+            <p className="text-base text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors duration-300">
               {description}
             </p>
           )}
