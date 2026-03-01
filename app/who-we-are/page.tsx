@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import CompanyList from '@/components/CompanyList';
 
 const stats = [
@@ -41,29 +41,36 @@ export default function WhoWeAre() {
 
     return (
         <main className="min-h-screen flex flex-col items-center bg-white relative overflow-hidden">
-            {/* Hero section with astronaut background */}
+            {/* Hero section with video background */}
             <div className="relative w-full">
-                <div className="relative w-full h-[600px] md:h-[700px]">
-                    <Image
-                        src="/images/who-we-are-bg.png"
-                        alt="Astronaut pointing"
-                        fill
-                        className="object-cover object-center"
-                        priority
-                        unoptimized
-                    />
-                    {/* Text positioned where the astronaut points (right side) */}
-                    <div className="absolute right-8 sm:right-16 md:right-24 top-1/2 -translate-y-1/4 z-10 max-w-md md:max-w-lg">
-                        <h1 className="font-orbitron text-3xl md:text-4xl font-bold uppercase tracking-wider text-zinc-800 leading-tight mb-6">
-                            Who We Are
-                        </h1>
-                        <p className="text-base md:text-lg text-zinc-600 leading-relaxed">
-                            We help businesses scale by turning digital technology into sustainable growth.
-                            As a premier tech consulting firm, we don&apos;t just implement tools—we build
-                            the digital ecosystems that empower industry leaders to innovate and dominate.
-                        </p>
-                    </div>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full"
+                >
+                    <source src="/images/who-we-are.mp4" type="video/mp4" />
+                </video>
+                {/* Text overlay — positioned in the white area */}
+                <div className="absolute z-10 fade-in-up" style={{ top: '50%', right: '5%', width: '50%' }}>
+                    <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider text-zinc-800 leading-tight mb-3 md:mb-6">
+                        Who We Are
+                    </h1>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-800 leading-relaxed">
+                        We help businesses scale by turning digital technology into sustainable growth.
+                        As a premier tech consulting firm, we don&apos;t just implement tools—we build
+                        the digital ecosystems that empower industry leaders to innovate and dominate.
+                    </p>
                 </div>
+            </div>
+
+            {/* Companies Section */}
+            <div className="relative z-10 w-full max-w-7xl px-8 sm:px-15 -mt-20 pb-8">
+                <h2 className="text-3xl font-bold mb-8 text-zinc-900">
+                    Industry Experience
+                </h2>
+                <CompanyList companies={companies} />
             </div>
 
             {/* Stats Cards */}
@@ -94,14 +101,6 @@ export default function WhoWeAre() {
                         </div>
                     ))}
                 </div>
-            </div>
-
-            {/* Companies Section */}
-            <div className="relative z-10 w-full max-w-7xl px-8 sm:px-20 pb-20">
-                <h2 className="text-2xl font-bold mb-8 text-zinc-900">
-                    Industry Experience
-                </h2>
-                <CompanyList companies={companies} />
             </div>
         </main>
     );

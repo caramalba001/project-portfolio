@@ -55,7 +55,7 @@ const Navbar = () => {
 
                     {/* Brand name on right */}
                     <Link href="/" className="text-white text-lg font-bold tracking-widest hover:text-cyan-400 transition-colors">
-                        Alcatar
+                        Actracia
                     </Link>
                 </div>
             </div>
