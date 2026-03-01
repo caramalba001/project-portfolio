@@ -100,14 +100,14 @@ export default function CompanyList({ companies }: CompanyListProps) {
                     onMouseDown={handleMouseDown}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    className="flex overflow-x-auto gap-16 px-8 items-center no-scrollbar cursor-grab active:cursor-grabbing"
+                    className="flex overflow-x-auto gap-8 px-30 items-center no-scrollbar cursor-grab active:cursor-grabbing"
                     style={{
                         scrollbarWidth: 'none',
                         msOverflowStyle: 'none',
                     }}
                 >
                     {/* Render minimal duplicates to ensure overflow */}
-                    <div className="flex gap-16 min-w-max">
+                    <div className="flex gap-10 min-w-max">
                         {[...companies, ...companies, ...companies].map((company, index) => (
                             <div
                                 key={`${company.name}-${index}`}

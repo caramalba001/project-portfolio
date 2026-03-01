@@ -1,5 +1,5 @@
 
-import { LayoutDashboard, AppWindow, Bot, Brain } from 'lucide-react';
+import { LayoutDashboard, AppWindow, Bot, Brain, GraduationCap, Monitor } from 'lucide-react';
 
 export const topics = [
     {
@@ -14,7 +14,7 @@ export const topics = [
                 title: 'Sales Performance Dashboard',
                 description: 'Real-time tracking of sales KPIs, regional performance, and top products.',
                 technologies: ['Power BI', 'SQL Server', 'DAX'],
-                image: '/images/projects/dashboard-sales.jpg' // Placeholder path
+                image: '/images/projects/dashboard-sales.jpg'
             },
             {
                 title: 'HR Analytics Suite',
@@ -30,19 +30,35 @@ export const topics = [
         description: 'Custom business applications built for efficiency.',
         icon: AppWindow,
         tags: ['Operations', 'Forms', 'Workflow'],
-        stats: '8+ Apps Deployed',
+        stats: '10+ Apps Deployed',
         projects: [
             {
-                title: 'Inventory Management App',
-                description: 'Mobile-first application for tracking stock levels and scanning barcodes.',
-                technologies: ['Power Apps', 'SharePoint', 'Power Automate'],
-                image: '/images/projects/app-inventory.jpg'
+                title: 'Sales & Service Process Automation',
+                description: 'Built custom apps to streamline internal sales tracking and IT service request management, reducing manual follow-ups and improving response times.',
+                technologies: ['Power Apps', 'Power Automate', 'SharePoint'],
+                items: ['Internal Work Tracking', 'IT Requirements Request'],
+                image: '/images/projects/app-sales-service.png'
             },
             {
-                title: 'Leave Request Portal',
-                description: 'Streamlined process for submitting and approving employee leave requests.',
-                technologies: ['Power Apps', 'Dataverse', 'Teams Integration'],
-                image: '/images/projects/app-leave.jpg'
+                title: 'Workforce Operations - Internal Apps and Automation Workflows',
+                description: 'Delivered a 3-app suite to digitize employee attendance, HR management, and financial payroll processes across the organization.',
+                technologies: ['Power Apps', 'Dataverse', 'Power Automate'],
+                items: ['Attendance Tracking', 'Employee Management Suite', 'Financial & Payroll'],
+                image: '/images/projects/app-workforce.png'
+            },
+            {
+                title: 'Enterprise Financial & Procurement Operations',
+                description: 'Designed an integrated suite of apps to streamline internal asset tracking, financial claims, and partner onboarding processes.',
+                technologies: ['Power Apps', 'SharePoint', 'Power Automate'],
+                items: ['Expense Reimbursement', 'Partner Registration Portal', 'Asset Management System'],
+                image: '/images/projects/app-finance.png'
+            },
+            {
+                title: 'End-to-End Production Tracking Platform',
+                description: 'A comprehensive digital solution to digitize the entire production lifecycle, integrating real-time status monitoring with shop-floor QR scanning updates.',
+                technologies: ['Power Apps', 'Power BI', 'QR Integration'],
+                items: ['Production Management App', 'Mobile QR Scanner'],
+                image: '/images/projects/app-production.png'
             }
         ]
     },
@@ -51,20 +67,29 @@ export const topics = [
         title: 'Automation Project',
         description: 'Streamlining workflows with intelligent automation.',
         icon: Bot,
-        tags: ['RPA', 'ETL', 'Scripts'],
-        stats: '500hrs Saved/Mo',
+        tags: ['RPA', 'Power Automate', 'Workflows'],
+        stats: '35+ Flows Built',
         projects: [
             {
-                title: 'Invoice Processing Bot',
-                description: 'Automated extraction of data from PDF invoices and entry into SAP.',
-                technologies: ['UiPath', 'OCR', 'SAP'],
-                image: '/images/projects/auto-invoice.jpg'
+                title: 'Sales & Service Process Automation',
+                description: 'Designed and delivered 20+ custom workflows to automate the entire sales pipeline and service support engine, eliminating manual handoffs.',
+                technologies: ['Power Automate', 'SharePoint', 'Outlook'],
+                items: ['Sales Pipeline Automation', 'Service Support Engine'],
+                image: '/images/projects/auto-sales.png'
             },
             {
-                title: 'Email Classification Agent',
-                description: 'Automatically sorts and responds to customer support emails.',
-                technologies: ['Power Automate', 'AI Builder', 'Outlook'],
-                image: '/images/projects/auto-email.jpg'
+                title: 'Workforce Operations - Internal Apps and Automation Workflows',
+                description: 'Built 5 automation flows to handle daily work log summaries, payroll calculations, and multi-level approval routing.',
+                technologies: ['Power Automate', 'Dataverse', 'Teams'],
+                items: ['Work Log Summary', 'Payroll', 'Approvals'],
+                image: '/images/projects/auto-workforce.png'
+            },
+            {
+                title: 'Enterprise Financial & Procurement Operations',
+                description: 'Implemented 10 automation flows for complex multi-level approval chains and end-to-end process automation across financial operations.',
+                technologies: ['Power Automate', 'SAP', 'SharePoint'],
+                items: ['Multi-level Approvals', 'Process Automation'],
+                image: '/images/projects/auto-finance.png'
             }
         ]
     },
@@ -87,6 +112,60 @@ export const topics = [
                 description: 'Machine learning model predicting product demand with 95% accuracy.',
                 technologies: ['Python', 'Scikit-learn', 'TensorFlow'],
                 image: '/images/projects/ai-forecast.jpg'
+            }
+        ]
+    },
+    {
+        slug: 'training',
+        title: 'Training',
+        description: 'Hands-on professional training for corporate & educational excellence.',
+        icon: GraduationCap,
+        tags: ['Power Apps', 'Power Automate', 'AI Builder'],
+        stats: '10+ Classes',
+        projects: [
+            {
+                title: 'Professional Training for Corporate & Educational Excellence',
+                description: 'A comprehensive, hands-on training program with over 10 delivered classes designed to equip corporate professionals and educators with low-code skills, focusing on transforming manual processes into digital solutions.',
+                technologies: ['Power Apps', 'Power Automate', 'AI Builder'],
+                image: '/images/projects/training-corporate.png',
+                sections: [
+                    {
+                        heading: 'Core Learning Modules',
+                        items: ['Power Apps Essential & Advanced Classes', 'Power Automate Essential & Advanced Classes', 'AI Builder']
+                    },
+                    {
+                        heading: 'Audience',
+                        items: ['Corporate Professionals', 'Educational Personnel']
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        slug: 'digital-solution',
+        title: 'Digital Solution',
+        description: 'End-to-end digital transformation from web platforms to data ecosystems.',
+        icon: Monitor,
+        tags: ['Web', 'Mobile', 'Cloud', 'Data'],
+        stats: '10+ Solutions',
+        projects: [
+            {
+                title: 'Enterprise Web & Mobile Platforms',
+                description: 'Full-stack web applications and responsive mobile solutions built for enterprise-scale operations and customer engagement.',
+                technologies: ['React', 'Next.js', 'Node.js', 'TypeScript'],
+                image: '/images/projects/digital-web.jpg'
+            },
+            {
+                title: 'Data Platform & Analytics Infrastructure',
+                description: 'Cloud-based data warehousing and ETL pipelines enabling real-time analytics and cross-departmental insights.',
+                technologies: ['Azure', 'Databricks', 'SQL Server', 'Python'],
+                image: '/images/projects/digital-data.jpg'
+            },
+            {
+                title: 'System Integration & API Development',
+                description: 'Seamless integration between legacy systems and modern platforms through custom APIs and middleware solutions.',
+                technologies: ['REST API', 'Azure Functions', 'Power Platform', 'SAP'],
+                image: '/images/projects/digital-api.jpg'
             }
         ]
     }
