@@ -12,8 +12,8 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: 'Actracia Website',
-  description: 'Actracia Website',
+  title: 'fellowlab Website',
+  description: 'fellowlab Website',
 };
 
 export default function RootLayout({
